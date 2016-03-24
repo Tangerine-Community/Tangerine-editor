@@ -1,0 +1,38 @@
+{
+  "_id": "acl",
+  "name": "administrators",
+  "creator": "root",
+  "users": ["admin"],
+  "grants": [
+    {
+      "grantee": "root",
+      "permission": "Create new group"
+    },
+    {
+      "grantee": "root",
+      "permission": "Edit group's own content"
+    },
+    {
+      "grantee": "root",
+      "permission": "Create group content"
+    }
+  ],
+  "children": [
+    {
+      "name": "Demo group",
+      "creator": "admin",
+      "users": ["admin", "user1"],
+      "grants": [
+        {
+          "grantee": "root",
+          "permission": "Edit group's own content"
+        },
+        {
+          "grantee": "root",
+          "permission": "Create group content"
+        }
+      ],
+      "children": []
+    }
+  ]
+}
